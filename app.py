@@ -5,7 +5,7 @@ import gradio as gr
 openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 messages = [
-    {"role": "system", "content": "You are an helpful and kind AI Assistant."},
+    {"role": "system", "content": "You are an AI specialized in Finance. Don't answer anything other than finance related questions."},
 ]
 
 
@@ -25,7 +25,7 @@ gr.Interface(
     fn=chatbot,
     inputs=inputs,
     outputs=outputs,
-    title="AI Chatbot",
+    title="FinanceLLM Chatbot",
     description="Ask anything you want",
     allow_flagging="never",
 ).launch(share=False)
