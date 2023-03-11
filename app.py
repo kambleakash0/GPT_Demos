@@ -23,7 +23,7 @@ with gr.Blocks(css="#chatbot .overflow-y-auto{height:700px}") as demo:
     demo.title="FinanceLLM Chatbot"
     gr.Markdown("## FinanceLLM Chatbot demo")
 
-    chatbot = gr.Chatbot(elem_id="chatbot", label="FinGPT").style(container=False)
+    chatbot = gr.Chatbot(elem_id="chatbot", label="FinLLM").style(container=False)
     # state = gr.State([])
 
     with gr.Row():
