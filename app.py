@@ -5,7 +5,7 @@ import gradio as gr
 openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 messages = [
-    {"role": "system", "content": "You are an AI specialized in Finance. Don't answer anything other than finance related questions."},
+    {"role": "system", "content": "You are an AI specialized in Healthcare. Don't answer anything other than health and healthcare related questions."},
 ]
 
 
@@ -20,10 +20,10 @@ def predict(input):
         return reply
 
 with gr.Blocks(css="#chatbot .overflow-y-auto{height:700px}") as demo:
-    demo.title="FinanceLLM Chatbot"
+    demo.title="HealthcareLLM Chatbot"
     gr.Markdown("## FinanceLLM Chatbot demo")
 
-    chatbot = gr.Chatbot(elem_id="chatbot", label="FinLLM").style(container=False)
+    chatbot = gr.Chatbot(elem_id="chatbot", label="HealthcareLLM").style(container=False)
     # state = gr.State([])
 
     with gr.Row():
