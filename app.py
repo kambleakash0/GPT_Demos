@@ -19,7 +19,9 @@ def predict(input):
         reply = [(messages[i]["content"], messages[i+1]["content"]) for i in range(1, len(messages)-1, 2)]
         return reply
 
-with gr.Blocks(css="#chatbot .overflow-y-auto{height:90%}") as demo:
+css = "footer {display: none !important;} .gradio-container {min-height: 0px !important;}"
+
+with gr.Blocks(css=css) as demo:
     chatbot = gr.Chatbot(elem_id="chatbot")
     # state = gr.State([])
 
