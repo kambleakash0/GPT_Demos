@@ -21,7 +21,7 @@ def predict(input):
 
 with gr.Blocks(css="#chatbot .overflow-y-auto{height:700px}") as demo:
     demo.title="HealthcareLLM Chatbot"
-    gr.Markdown("## FinanceLLM Chatbot demo")
+    gr.Markdown("## HealthcareLLM Chatbot demo")
 
     chatbot = gr.Chatbot(elem_id="chatbot", label="HealthcareLLM").style(container=False)
     # state = gr.State([])
